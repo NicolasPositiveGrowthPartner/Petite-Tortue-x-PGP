@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PGP × Petite Tortue — Structuration export &amp; Test marché</title>
+<meta name="description" content="Petite Tortue à l'international — pistes d'idées pour la vaisselle 100% biosourcée pour enfants. Proposition d'accompagnement Positive Growth Partner.">
+<title>Petite Tortue à l'international — Pistes d'idées</title>
 <style>
   :root {
-    --green:#1e7a4f; --green-dark:#0f4d30; --green-soft:#e8f2ec;
+    --blue:#255e84; --blue-dark:#183f5a; --blue-soft:#e7eff5;
     --ink:#1a2430; --grey:#5c6a76; --line:#dde4e9;
     --bg:#f6f8f9; --card:#ffffff;
   }
@@ -14,66 +15,63 @@
   html { background:var(--bg); }
   body { font-family:'Segoe UI', 'Helvetica Neue', system-ui, sans-serif; color:var(--ink); }
 
-  .sheet { max-width:860px; margin:24px auto; background:var(--card); box-shadow:0 4px 24px rgba(15,40,30,.10); }
+  .sheet { max-width:860px; margin:24px auto; background:var(--card); box-shadow:0 4px 24px rgba(24,63,90,.10); }
 
-  /* ---------- HERO ---------- */
-  .hero { background:linear-gradient(135deg, var(--green-dark) 0%, var(--green) 70%); color:#fff; padding:34px 48px 30px; }
-  .brands { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:26px; }
-  .pgp-mark { display:flex; align-items:center; gap:10px; }
-  .pgp-mark .dot-net { width:34px; height:34px; }
-  .pgp-mark .name { font-size:13px; font-weight:700; letter-spacing:.10em; line-height:1.3; }
-  .pgp-mark .name span { opacity:.85; font-weight:400; letter-spacing:.02em; display:block; font-size:9.5px; }
-  .pt-mark { text-align:right; }
-  .pt-mark .logo-box { display:inline-block; background:#fff; border-radius:10px; padding:8px 12px; line-height:0; box-shadow:0 2px 10px rgba(0,0,0,.18); }
-  .pt-mark .logo-box img { height:44px; width:auto; }
-  .pt-mark small { display:block; font-size:9.5px; opacity:.85; margin-top:6px; }
-  .hero h1 { font-size:25px; font-weight:700; line-height:1.25; max-width:620px; }
-  .hero p { margin-top:10px; font-size:13px; line-height:1.55; max-width:640px; opacity:.92; }
-  .hero .kpi { display:flex; gap:34px; margin-top:22px; flex-wrap:wrap; }
-  .hero .kpi div { font-size:10px; text-transform:uppercase; letter-spacing:.08em; opacity:.75; }
-  .hero .kpi b { display:block; font-size:19px; letter-spacing:0; text-transform:none; opacity:1; }
-
-  .trust-strip { display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; }
-  .trust-strip span {
-    font-size:10.5px; font-weight:600; letter-spacing:.03em;
-    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25);
-    border-radius:20px; padding:4px 12px;
-  }
+  /* ---------- HERO (bandeau blanc) ---------- */
+  .hero { background:var(--card); padding:28px 48px; display:flex; align-items:center; gap:28px; border-bottom:4px solid var(--blue); }
+  .hero .logo { flex:none; line-height:0; }
+  .hero .logo img { height:66px; width:auto; }
+  .hero .headline { flex:1; text-align:center; }
+  .hero h1 { font-size:25px; font-weight:800; color:var(--blue); line-height:1.25; }
+  .hero p { margin-top:8px; font-size:13px; color:var(--grey); }
 
   /* ---------- BODY ---------- */
   .body { padding:30px 48px 36px; }
-  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--green-dark); margin:26px 0 12px; display:flex; align-items:center; gap:10px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--blue); margin:26px 0 14px; display:flex; align-items:center; gap:10px; }
   h2:first-child { margin-top:0; }
   h2::after { content:""; flex:1; height:1px; background:var(--line); }
+  .section-intro { font-size:12px; color:var(--grey); margin:-6px 0 14px; }
 
-  .intro { font-size:13.5px; line-height:1.6; color:var(--ink); }
-  .intro strong { color:var(--green-dark); }
+  /* ---------- DYNAMIQUES (4 cadres) ---------- */
+  .dynamics { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .dyn { border:1px solid var(--line); border-top:3px solid var(--blue); border-radius:8px; padding:14px 16px; background:var(--card); }
+  .dyn h3 { font-size:13px; font-weight:700; color:var(--blue-dark); margin-bottom:8px; }
+  .dyn p { font-size:11.5px; line-height:1.5; color:var(--ink); }
+  .dyn p strong { color:var(--blue-dark); }
+
+  /* ---------- ATOUTS (2 cadres) ---------- */
+  .strengths { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .strength { border:1px solid var(--line); border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:14px 16px; background:var(--blue-soft); }
+  .strength h3 { font-size:13.5px; font-weight:700; color:var(--blue-dark); margin-bottom:8px; }
+  .strength p { font-size:11.5px; line-height:1.5; }
+  .strength p + p { margin-top:6px; }
+
+  /* ---------- PAYS (2 cadres) ---------- */
+  .countries { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .country { border:1px solid var(--line); border-top:4px solid var(--blue); border-radius:8px; padding:14px 16px; }
+  .country h3 { font-size:14px; font-weight:800; color:var(--blue-dark); margin-bottom:8px; }
+  .country p { font-size:11.5px; line-height:1.5; }
+  .country .tags { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+  .country .tags span { background:var(--blue-soft); color:var(--blue-dark); border:1px solid var(--line); border-radius:20px; padding:3px 10px; font-size:10px; font-weight:600; }
+  .country .angle { background:rgba(37,94,132,.06); border-left:3px solid var(--blue); padding:8px 10px; border-radius:0 6px 6px 0; font-size:11px; margin-top:8px; }
+  .country .angle b { color:var(--blue-dark); }
 
   /* ---------- PHASES ---------- */
   .phases { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
   .phase { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--card); }
-  .phase .head { background:var(--green-soft); padding:12px 16px; display:flex; align-items:center; gap:10px; }
-  .phase .head .num { width:26px; height:26px; border-radius:50%; background:var(--green); color:#fff; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; }
-  .phase .head .t { font-size:13.5px; font-weight:700; color:var(--green-dark); }
-  .phase .head .d { margin-left:auto; font-size:10.5px; color:var(--grey); white-space:nowrap; }
+  .phase .head { background:var(--blue-soft); padding:12px 16px; display:flex; align-items:center; gap:10px; }
+  .phase .head .num { width:26px; height:26px; border-radius:50%; background:var(--blue); color:#fff; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; }
+  .phase .head .t { font-size:13.5px; font-weight:700; color:var(--blue-dark); }
   .phase ul { list-style:none; padding:12px 16px 6px; }
   .phase li { font-size:12px; line-height:1.45; padding-left:16px; position:relative; margin-bottom:7px; }
-  .phase li::before { content:"—"; position:absolute; left:0; color:var(--green); }
+  .phase li::before { content:"—"; position:absolute; left:0; color:var(--blue); }
   .phase .deliver { border-top:1px dashed var(--line); padding:10px 16px 12px; font-size:11.5px; color:var(--grey); }
   .phase .deliver b { color:var(--ink); font-size:11px; text-transform:uppercase; letter-spacing:.06em; display:block; margin-bottom:5px; }
 
-  /* ---------- COUNTRIES ---------- */
-  table { width:100%; border-collapse:collapse; font-size:12px; }
-  th { text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:#fff; background:var(--green); padding:8px 12px; }
-  th:first-child { border-radius:6px 0 0 0; } th:last-child { border-radius:0 6px 0 0; }
-  td { padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.45; }
-  td:first-child { font-weight:700; color:var(--green-dark); white-space:nowrap; }
-  tr:nth-child(even) td { background:#fbfcfc; }
-
-  /* ---------- NEXT STEP ---------- */
-  .next { margin-top:6px; background:var(--green-soft); border-left:4px solid var(--green); border-radius:0 8px 8px 0; padding:14px 18px; font-size:12.5px; line-height:1.6; }
+  /* ---------- MODALITÉS ---------- */
+  .next { background:var(--blue-soft); border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:14px 18px; font-size:12.5px; line-height:1.6; }
   .next p + p { margin-top:6px; }
-  .next b { color:var(--green-dark); }
+  .next b { color:var(--blue-dark); }
 
   /* ---------- FOOTER ---------- */
   footer { border-top:1px solid var(--line); padding:16px 48px; display:flex; justify-content:space-between; align-items:center; font-size:11px; color:var(--grey); }
@@ -82,10 +80,9 @@
 
   @media (max-width:640px) {
     .hero, .body, footer { padding-left:22px; padding-right:22px; }
-    .phases { grid-template-columns:1fr; }
-    .brands { flex-direction:column; gap:14px; }
-    .pt-mark { text-align:left; }
-    .pt-mark .logo-box img { height:36px; }
+    .hero { flex-direction:column; text-align:center; gap:14px; }
+    .hero .logo img { height:48px; }
+    .dynamics, .strengths, .countries, .phases { grid-template-columns:1fr; }
   }
 
   @media print {
@@ -100,96 +97,99 @@
 <div class="sheet">
 
   <div class="hero">
-    <div class="brands">
-      <div class="pgp-mark">
-        <svg class="dot-net" viewBox="0 0 40 40" aria-hidden="true">
-          <line x1="6" y1="24" x2="15" y2="10" stroke="#9fd4f2" stroke-width="1.4"/>
-          <line x1="6" y1="24" x2="20" y2="30" stroke="#e9d98a" stroke-width="1.4"/>
-          <line x1="15" y1="10" x2="30" y2="14" stroke="#bfe6cd" stroke-width="1.4"/>
-          <line x1="20" y1="30" x2="30" y2="14" stroke="#bfe6cd" stroke-width="1.4"/>
-          <line x1="15" y1="10" x2="22" y2="4" stroke="#e9d98a" stroke-width="1.4"/>
-          <line x1="22" y1="4" x2="30" y2="14" stroke="#e9d98a" stroke-width="1.4"/>
-          <circle cx="6" cy="24" r="3" fill="#9fd4f2"/>
-          <circle cx="15" cy="10" r="3.4" fill="#9fd4f2"/>
-          <circle cx="20" cy="30" r="2.6" fill="#e9d98a"/>
-          <circle cx="22" cy="4" r="2.6" fill="#e9d98a"/>
-          <circle cx="30" cy="14" r="3.8" fill="#bfe6cd"/>
-        </svg>
-        <div class="name">POSITIVE GROWTH PARTNER<span>The right impact everywhere</span></div>
-      </div>
-      <div class="pt-mark">
-        <div class="logo-box"><img src="logo.png" alt="Petite Tortue"></div>
-        <small>petite-tortue.fr · vaisselle 100% biosourcée pour enfants</small>
-      </div>
-    </div>
-
-    <h1>Structurer l’export de Petite Tortue,<br>puis tester son premier marché étranger</h1>
-    <p>Proposition d’accompagnement en deux temps, adaptée au calendrier de la société : la campagne de prévente Ulule prouve la demande française, l’international se prépare dès maintenant — sans recrutement, à la mesure d’une jeune TPE.</p>
-    <div class="kpi">
-      <div><b>2 phases</b><span>audit puis test terrain</span></div>
-      <div><b>1 pays</b><span>choisi ensemble</span></div>
-      <div><b>30–50</b><span>contacts qualifiés</span></div>
-      <div><b>1 rapport</b><span>go / no-go documenté</span></div>
-    </div>
-    <div class="trust-strip">
-      <span>0% pétrole</span>
-      <span>0% additifs chimiques</span>
-      <span>100% production française</span>
-      <span>Prévente en cours sur Ulule</span>
+    <div class="logo"><img src="logo.png" alt="Petite Tortue"></div>
+    <div class="headline">
+      <h1>Petite Tortue à l’international<br>Pistes d’idées</h1>
+      <p>Proposition d’accompagnement en deux temps : Structuration – Test marché</p>
     </div>
   </div>
 
   <div class="body">
 
-    <p class="intro">Positive Growth Partner accompagne les startups, TPE et PME à impact positif dans leur développement international : <strong>qualification des marchés, priorisation des pays, identification de partenaires locaux, puis exécution commerciale</strong>. Près de 30 ans d’expérience du business international, des clients dans plus de 45 pays, un interlocuteur trilingue (FR · EN · ES) basé à Lyon.</p>
+    <h2>Dynamiques européennes</h2>
+    <p class="section-intro">Quatre tendances de fond qui jouent en faveur de la vaisselle biosourcée pour enfants en Europe.</p>
+    <div class="dynamics">
+      <div class="dyn">
+        <h3>Marché en croissance soutenue</h3>
+        <p>Le marché européen de la vaisselle biodégradable pèse <strong>≈ 3,8 Md$ en 2025</strong> et vise <strong>6,9 Md$ en 2032</strong> (≈ +8,9 %/an). L’Europe est la <strong>1ʳᵉ région mondiale</strong> du secteur, portée par la réglementation anti-plastique et des consommateurs exigeants.</p>
+      </div>
+      <div class="dyn">
+        <h3>Réglementation qui interdit le plastique à risque</h3>
+        <p>Depuis le <strong>20 janvier 2025</strong>, le Règlement (UE) 2024/3190 <strong>interdit le BPA et les bisphénols dangereux</strong> dans tous les matériaux au contact des aliments. La vaisselle 100% biosourcée de Petite Tortue est <strong>déjà conforme</strong> — un avantage concurrentiel direct.</p>
+      </div>
+      <div class="dyn">
+        <h3>Des parents qui privilégient le sain et le naturel</h3>
+        <p>Environ <strong>70 % des parents européens</strong> privilégient le bio et le naturel pour leurs enfants. La sensibilisation aux perturbateurs endocriniens et aux microplastiques transforme l’acte d’achat puériculture : <strong>santé de l’enfant d’abord</strong>, prix ensuite.</p>
+      </div>
+      <div class="dyn">
+        <h3>Le biosourcé devient un standard de l’économie circulaire</h3>
+        <p>Directive plastiques à usage unique, objectifs d’économie circulaire de l’UE, distributeurs qui déplastifient leurs rayons : les <strong>matériaux biosourcés passent du statut de niche à celui de référence</strong>, ouvrant les portes des enseignes bio et des pharmacies.</p>
+      </div>
+    </div>
 
-    <h2>La mission proposée</h2>
+    <h2>Atouts stratégiques de Petite Tortue</h2>
+    <div class="strengths">
+      <div class="strength">
+        <h3>Zéro pétrole, zéro additif — conforme avant tout le monde</h3>
+        <p>Alors que les industriels du plastique doivent reformuler sous la pression réglementaire (BPA, bisphénols), Petite Tortue part <strong>de l’avance</strong> : 0% pétrole, 0% additifs chimiques, aucun effort de conformité à anticiper.</p>
+        <p>C’est un <strong>argument de vente immédiat</strong> face aux distributeurs : un produit qui incarne la norme de demain, disponible aujourd’hui.</p>
+      </div>
+      <div class="strength">
+        <h3>100% production française — un différenciateur export</h3>
+        <p>Sur les marchés voisins (Belgique, Allemagne, Suisse), le <strong>made in France</strong> est un signal de qualité et de traçabilité valorisé, surtout en puériculture.</p>
+        <p>Face aux vaisselles pour enfants produites en Asie, Petite Tortue raconte une <strong>histoire courte et saine</strong> : matière biosourcée, fabrication française, logistique européenne rapide et bas-carbone.</p>
+      </div>
+    </div>
 
+    <h2>Pays cibles — focus sur 2 marchés</h2>
+    <div class="countries">
+      <div class="country">
+        <h3>🇧🇪 Belgique</h3>
+        <p>Marché bio et puériculture denses, <strong>faible barrière linguistique</strong>, proximité logistique immédiate. Grandes enseignes bio structurées et consommateurs francophones réceptifs au made in France.</p>
+        <div class="tags"><span>Bio</span><span>Puériculture</span><span>Proximité</span><span>FR natif</span></div>
+        <div class="angle"><b>Angle :</b> distributeurs bio + boutiques puériculture, cycle de vente court, idéal pour un premier test à faible risque.</div>
+      </div>
+      <div class="country">
+        <h3>🇩🇪 Allemagne</h3>
+        <p>Premier marché européen de la vaisselle biodégradable (<strong>≈ 9 % du marché européen</strong>) et population <strong>très sensible aux perturbateurs endocriniens</strong>. Le consommateur allemand paie un premium pour la santé des enfants et la durabilité.</p>
+        <div class="tags"><span>Santé enfant</span><span>Öko/Bio</span><span>Premium</span><span>1ᵉʳ marché UE</span></div>
+        <div class="angle"><b>Angle :</b> distributeur puériculture spécialisé + pharmacies, narration « sans pétrole, sans bisphénol, fabriqué en France ».</div>
+      </div>
+    </div>
+
+    <h2>Mission proposée</h2>
     <div class="phases">
       <div class="phase">
         <div class="head">
           <div class="num">1</div>
           <div class="t">Structuration export</div>
-          <div class="d">4 à 6 semaines</div>
         </div>
         <ul>
-          <li>Audit de préparation export : produit, prix &amp; marges, conformité, packaging, langues</li>
-          <li>Positionnement international : santé de l’enfant · sans pétrole ni additifs · biosourcé · made in France</li>
-          <li>Priorisation des pays cibles (matrice de scoring)</li>
-          <li>Liste des besoins et partenaires clés : distributeurs, importateurs, prescripteurs</li>
+          <li>Analyse de l’existant</li>
+          <li>Proposition de typologie de clients cibles à l’export</li>
+          <li>Création de l’UVP</li>
+          <li>Proposition de feuille de route</li>
         </ul>
-        <div class="deliver"><b>Livrables</b>Rapport d’audit (SWOT export) · feuille de route 12 mois · short-list de 3–5 marchés · dossier pays n°1</div>
+        <div class="deliver"><b>Livrables</b>Rapport d’audit (SWOT export) · feuille de route 6 mois · short-list de 2-3 marchés · dossier pays sur pays sélectionné ensemble</div>
       </div>
 
       <div class="phase">
         <div class="head">
           <div class="num">2</div>
           <div class="t">Test marché — 1 pays</div>
-          <div class="d">6 à 8 semaines</div>
         </div>
         <ul>
-          <li>Campagne de qualification multicanales : email, LinkedIn, appels (FR · EN · ES)</li>
-          <li>30 à 50 interlocuteurs cibles : distributeurs puériculture, boutiques bio, pharmacies</li>
-          <li>Lecture terrain : prix accepté, arguments qui convertissent, freins du marché</li>
+          <li>Prospection de 10 à 15 clients cibles en campagne multicanales</li>
+          <li>Propositions commerciales</li>
         </ul>
-        <div class="deliver"><b>Livrables</b>Rapport de faisabilité + recommandation go / no-go · fiches prospects qualifiés · CRM structuré · premiers partenaires identifiés</div>
+        <div class="deliver"><b>Livrables</b>Rapport de recommandation &amp; ajustements nécessaires · fiches prospects qualifiés · CRM structuré · premiers partenaires identifiés</div>
       </div>
     </div>
 
-    <h2>Candidats pour le pays du test — à arbitrer ensemble</h2>
-    <table>
-      <tr><th style="width:14%">Pays</th><th style="width:50%">Atout principal</th><th>Modèle de distribution à tester</th></tr>
-      <tr><td>Belgique</td><td>Proximité, marché bio &amp; puériculture dense, faible barrière linguistique</td><td>Distributeurs + boutiques bio</td></tr>
-      <tr><td>Allemagne</td><td>Très forte sensibilité aux perturbateurs endocriniens, premier marché de l’UE</td><td>Distributeur puériculture / pharmacies</td></tr>
-      <tr><td>Suisse</td><td>Pouvoir d’achat premium, made in France valorisé</td><td>Importateur + boutiques spécialisées</td></tr>
-      <tr><td>Espagne</td><td>Réseau de l’accompagnant sur place, bio en forte croissance</td><td>Distributeur + test D2C</td></tr>
-    </table>
-
     <h2>Modalités &amp; prochaine étape</h2>
     <div class="next">
-      <p><b>Engagement :</b> forfait par phase, sans durée minimale — budget à définir ensemble selon le périmètre retenu.</p>
-      <p><b>Rythme :</b> un point hebdomadaire, livrables écrits partagés.</p>
-      <p><b>Décision à prendre ensemble :</b> le pays du test — les commandes ou contacts étrangers éventuellement reçus pendant la campagne Ulule seront le premier critère de choix.</p>
+      <p><b>Engagement :</b> durée, volume de travail et budget à définir ensemble.</p>
+      <p><b>Rythme :</b> un point bi-mensuel, livrables écrits partagés.</p>
     </div>
 
   </div>
